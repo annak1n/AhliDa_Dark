@@ -1,0 +1,14 @@
+ManifestFileVersion: 0
+CRC: 362559258
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: d2fa7d012765b4acb208a1837e80f361
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 31d6cfe0d16ae931b73c59d7e0c089c0
+HashAppended: 0
+ClassTypes: []
+Assets:
+- Assets/Scene/loadingbar/loadingbar.unity
+Dependencies: []

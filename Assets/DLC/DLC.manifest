@@ -1,0 +1,7 @@
+ManifestFileVersion: 0
+CRC: 1263222091
+AssetBundleManifest:
+  AssetBundleInfos:
+    Info_0:
+      Name: loadingbar
+      Dependencies: {}
