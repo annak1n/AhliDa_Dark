@@ -98,7 +98,7 @@ public class World : MonoBehaviour
 	public void addSpaceGeometryMapping(string respath)
 	{
 		Debug.Log("loading scene(" + respath + ")...");
-		UI.inst.info("scene(" + respath + "), spaceID=" + KBEngineApp.app.spaceID);
+	//*	UI.inst.info("scene(" + respath + "), spaceID=" + KBEngineApp.app.spaceID);
 		if(terrain == null)
 			terrain = Instantiate(terrainPerfab) as UnityEngine.GameObject;
 
@@ -113,7 +113,7 @@ public class World : MonoBehaviour
 			return;
 		}
 
-		UI.inst.info("loading scene...(加载场景中...)");
+	//*	UI.inst.info("loading scene...");
 		Debug.Log("loading scene...");
 	}
 
