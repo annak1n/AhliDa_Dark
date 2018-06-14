@@ -18,7 +18,6 @@ Shader "Hidden/BrightPassFilter2"
 	};
 	
 	sampler2D _MainTex;	
-	half4     _MainTex_ST;
 	
 	half4 _Threshhold;
 		
@@ -26,7 +25,7 @@ Shader "Hidden/BrightPassFilter2"
 	{
 		v2f o;
 		o.pos = UnityObjectToClipPos(v.vertex);
-		o.uv = UnityStereoScreenSpaceUVAdjust(v.texcoord.xy, _MainTex_ST);
+		o.uv =  v.texcoord.xy;
 		return o;
 	} 
 	
@@ -52,9 +51,11 @@ Shader "Hidden/BrightPassFilter2"
 		Pass 
  		{
 			ZTest Always Cull Off ZWrite Off
+			Fog { Mode off }      
 
 			CGPROGRAM
 
+			#pragma fragmentoption ARB_precision_hint_fastest
 			#pragma vertex vert
 			#pragma fragment fragScalarThresh
 
@@ -64,9 +65,11 @@ Shader "Hidden/BrightPassFilter2"
 		Pass 
  		{
 			ZTest Always Cull Off ZWrite Off
+			Fog { Mode off }      
 
 			CGPROGRAM
 
+			#pragma fragmentoption ARB_precision_hint_fastest
 			#pragma vertex vert
 			#pragma fragment fragColorThresh
 
